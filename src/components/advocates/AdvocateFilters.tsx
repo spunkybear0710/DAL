@@ -132,7 +132,7 @@ const AdvocateFilters = ({ onApplyFilters }: AdvocateFiltersProps) => {
             <SelectValue placeholder="Select location" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Locations</SelectItem>
+            <SelectItem value="all_locations">All Locations</SelectItem>
             {locationOptions.map((location) => (
               <SelectItem key={location} value={location}>
                 {location}
@@ -179,7 +179,7 @@ const AdvocateFilters = ({ onApplyFilters }: AdvocateFiltersProps) => {
             <SelectValue placeholder="Any gender" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Any Gender</SelectItem>
+            <SelectItem value="any_gender">Any Gender</SelectItem>
             <SelectItem value="Male">Male</SelectItem>
             <SelectItem value="Female">Female</SelectItem>
           </SelectContent>
