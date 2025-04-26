@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Advocate } from "@/types";
 import { Star, CheckCircle, MapPin, Phone, Mail, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface AdvocateCardProps {
   advocate: Advocate;
@@ -77,8 +78,8 @@ const AdvocateCard = ({ advocate }: AdvocateCardProps) => {
                 <Button variant="outline" className="flex-1" size="sm">
                   <Calendar className="h-4 w-4 mr-2" /> Book Appointment
                 </Button>
-                <Button variant="secondary" className="flex-1" size="sm">
-                  View Profile
+                <Button variant="secondary" className="flex-1" size="sm" asChild>
+                  <Link to={`/advocate/${advocate.id}`}>View Profile</Link>
                 </Button>
               </div>
             </div>
